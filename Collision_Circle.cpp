@@ -2,7 +2,9 @@
 #define USE_MATH_DIFINES
 #include <math.h>
 
-Collision_Circle::Collision_Circle() {}
+Collision_Circle::Collision_Circle() {
+
+}
 
 void Collision_Circle::OnCollision(int num) {
 	switch (num) {

@@ -12,7 +12,7 @@ private:
 	Vector2 direction_;
 	float length_;
 public:
-	Collision_Circle();
+	Collision_Circle(Entity entity);
 	void OnCollision(int num);
 	float Length(Vector2 pos1, Vector2 pos2);
 };
