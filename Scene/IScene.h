@@ -23,7 +23,6 @@ public:
 
 protected:
 	//現在のシーンを識別するための変数
-	//この数字をシーンクラスの中でいじることでシーンを遷移させる
 	static int sceneNum_;
 	IntVector2 mousePos_;
 	

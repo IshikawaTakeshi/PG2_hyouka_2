@@ -175,7 +175,6 @@
     <ClInclude Include="Entity\Player.h">
       <Filter>Entity</Filter>
     </ClInclude>
-    <ClInclude Include="MatrixMath.h" />
     <ClInclude Include="Entity\Enemy.h">
       <Filter>Entity</Filter>
     </ClInclude>

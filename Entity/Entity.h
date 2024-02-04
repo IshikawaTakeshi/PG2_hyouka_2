@@ -3,6 +3,10 @@
 #define USE_MATH_DIFINES
 #include <math.h>
 
+//========================================================
+//	各エンティティの基底クラス
+//========================================================
+
 class Entity {
 protected:
 	Vector2 pos_;
@@ -16,8 +20,9 @@ public:
 	~Entity();
 
 	virtual void Draw();
-
-	float Length(IntVector2 pos2);
 	virtual void Normalize();
+	float Length(IntVector2 pos2);
+
+	virtual bool GetIsAlive() { return isAlive_; }
 };
 

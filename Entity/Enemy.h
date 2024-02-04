@@ -1,25 +1,23 @@
 #pragma once
 #include "Entity/Entity.h"
-#include "EnemySpawner.h"
+
+static const int enemySpawnMax = 10;
 
 class Player;
 class Enemy: public Entity{
-private:
-	EnemySpawner* enemySpawner_;
-	int spawnTimer_ = 0;
 public:
 	Enemy();
 	~Enemy();
-	void Init();
-	void Update(Vector2 playerPos);
+
+	void Init(Vector2 playerPos,Vector2 spawnerPos);
+	void Update();
 	void Draw()override;
 	float Length(Vector2 pos2);
 	void Normalize()override;
 
 	Vector2 GetPos() { return pos_; }
 	Vector2 GetSize() { return size_; }
-	bool GetIsAlive() { return isAlive_; }
-	int GetTimer() { return spawnTimer_; }
+	bool GetIsAlive()override { return isAlive_; }
 
 	void SetIsAlive(bool isAlive) { isAlive_ = isAlive; }
 };

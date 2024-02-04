@@ -1,6 +1,10 @@
-﻿#include "Collision/Collision_Circle.h"
+﻿#include "Collision_Circle.h"
 #define USE_MATH_DIFINES
 #include <math.h>
+
+//========================================================
+//	円形同士の衝突判定を処理するクラス
+//========================================================
 
 //コンストラクタ
 Collision_Circle::Collision_Circle(Player* player, Spawner* spawner) {
@@ -8,6 +12,7 @@ Collision_Circle::Collision_Circle(Player* player, Spawner* spawner) {
 	for (int i = 0; i < enemySpawnMax; i++) {
 		enemy_[i] = spawner->GetEnemy(i);
 	}
+	
 	direction_ = { 0,0 };
 	length_ = 0;
 }
@@ -22,21 +27,21 @@ void Collision_Circle::OnCollision(int num) {
 				player_->SetIsAlive(false);
 			}
 		}
-		break;
 	case 1://プレイヤー弾と敵の衝突処理
 		for (int i = 0; i < 10; i++) {
 			for (int a = 0; a < enemySpawnMax; a++) {
-				Length(player_->GetBullet(i)->GetPos(), enemy_[a]->GetPos());
+				Length(player_->GetBullet(i)->GetPos(),enemy_[a]->GetPos());
 				if (player_->GetBullet(i)->GetSize().x + enemy_[a]->GetSize().x >= length_) {
 					enemy_[a]->SetIsAlive(false);
 					player_->GetBullet(i)->SetIsShot(false);
 					break;
 				}
 			}
+			
 		}
 		break;
 	}
-
+	
 }
 
 //距離を計算する関数

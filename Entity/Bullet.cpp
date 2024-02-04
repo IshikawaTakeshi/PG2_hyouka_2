@@ -3,23 +3,23 @@
 #include <math.h>
 #include "Novice.h"
 
-Bullet::Bullet(Vector2 pos, Vector2 size, float speed) {
-	pos_ = pos;
-	size_ = size;
-	speed_ = speed;
+Bullet::Bullet() {
+	pos_ = { -20.0f,750.0f };
+	size_ = { 4.0f,4.0f };
+	speed_ = 16.0f;
 	direction_ = { 0,0 };
 	isAlive_ = false;
 }
 
-void Bullet::Init(Vector2 playerPos,IntVector2 mousePos) {
-		pos_ = playerPos;
-		Length(mousePos);
-		Normalize();
-		isAlive_ = true;
+void Bullet::Init(Vector2 playerPos, IntVector2 mousePos) {
+	pos_ = playerPos;
+	Length(mousePos);
+	Normalize();
+	isAlive_ = true;
 }
 
 void Bullet::Update() {
-	
+
 	pos_.x -= direction_.x * speed_;
 	pos_.y -= direction_.y * speed_;
 
@@ -35,7 +35,7 @@ void Bullet::Draw() {
 		static_cast<int>(size_.x),
 		static_cast<int>(size_.y),
 		0.0f,
-		0xff0000ff,
+		0xffff00ff,
 		kFillModeSolid
 	);
 }

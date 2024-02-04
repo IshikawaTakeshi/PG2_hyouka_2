@@ -14,7 +14,8 @@ public:
 
 	Vector2 GetPos() { return pos_; }
 	Vector2 GetSize() { return size_; }
-	bool GetIsAlive() { return isAlive_; }
+	Bullet* GetBullet(int num) { return bullet_[num]; }
+	bool GetIsAlive()override { return isAlive_; }
 
 	void SetIsAlive(bool isAlive) { isAlive_ = isAlive; }
 private:

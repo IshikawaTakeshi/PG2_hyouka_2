@@ -163,7 +163,6 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="Entity\Player.h" />
     <ClInclude Include="InputKeys.h" />
-    <ClInclude Include="MatrixMath.h" />
     <ClInclude Include="Scene\IScene.h" />
     <ClInclude Include="Scene\Scene_Play.h" />
     <ClInclude Include="Scene\SceneManager.h" />

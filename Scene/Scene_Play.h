@@ -1,14 +1,13 @@
 ﻿#pragma once
 #include "Scene/IScene.h"
 #include "Entity/Player.h"
-#include "Entity/Enemy.h"
-#include "Collision_Circle.h"
-
-
+#include "Entity/EnemySpawner.h"
+#include "Collision/Collision_Circle.h"
 
 //=======================================
 // ゲームプレイシーンのクラス
 //=======================================
+
 class Play_Scene :public IScene {
 public: //オーバーライド
     Play_Scene();
@@ -21,8 +20,7 @@ public: //オーバーライド
 private:
     //その他 scene特有の変数・関数
     Player* player_;
-    Enemy* enemy_[10];
-    EnemySpawner* enemySpawner_;
+    Spawner* spawner_;
     Collision_Circle* collisionCircle_;
 };
 
