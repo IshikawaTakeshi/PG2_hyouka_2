@@ -1,7 +1,7 @@
 ﻿#include "Scene/Scene_Select.h"
-#include "Novice.h"
 #include "Scene/SceneManager.h"
 #include "Scene/Scene_Play.h"
+#include "Novice.h"
 
 
 Select_Scene::Select_Scene() {
@@ -22,7 +22,7 @@ void Select_Scene::Unload() {
 void Select_Scene::Update(InputKeys& input) {
 
 	Novice::ScreenPrintf(500, 300, "WASD:move");
-	Novice::ScreenPrintf(500, 350, "MOUSECLICK:bulletShot");
+	Novice::ScreenPrintf(500, 350, "MOUSE LEFT PRESS:bulletShot");
 	Novice::ScreenPrintf(500, 450, "START:push to SPACE");
 	if (input.keys[DIK_SPACE] && input.preKeys[DIK_SPACE] == 0) {
 		sceneNum_ = GAMEPLAY;

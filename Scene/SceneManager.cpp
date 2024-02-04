@@ -18,7 +18,7 @@ SceneManager::~SceneManager() {
 
 }
 
-//各シーンの更新及び描画処理
+//各シーンの
 void SceneManager::Run(InputKeys& input) {
 	preSceneNum_ = currentSceneNum_;
 	currentSceneNum_ = sceneArr_[currentSceneNum_]->GetSceneNum();
@@ -29,4 +29,9 @@ void SceneManager::Run(InputKeys& input) {
 	}
 	sceneArr_[currentSceneNum_]->Update(input);
 	sceneArr_[currentSceneNum_]->Draw();
+
+#ifdef _DEBUG
+	//シーンの番号表示
+	Novice::ScreenPrintf(10, 10, "SceneNum:%d", currentSceneNum_);
+#endif
 }

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 struct InputKeys {
 	char keys[256];

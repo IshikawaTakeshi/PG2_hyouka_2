@@ -1,14 +1,16 @@
-#include "Entity/Entity.h"
+﻿#include "Entity/Entity.h"
 
-Entity::Entity() {}
+Entity::Entity() {
+	pos_ = { 0,0 };
+	size_ = { 0,0 };
+	direction_ = { 0,0 };
+	speed_ = 0;
+	length_ = 0;
+	isAlive_ = 0;
+}
 
 Entity::~Entity() {}
 
 void Entity::Draw() {}
-
-float Entity::Length(IntVector2 pos2) {
-	pos2;
-	return 0.0f;
-}
 
 void Entity::Normalize() {}

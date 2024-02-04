@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include "Vector2.h"
 #define USE_MATH_DIFINES
 #include <math.h>
 
 //========================================================
-//	ŠeƒGƒ“ƒeƒBƒeƒB‚ÌŠî’êƒNƒ‰ƒX
+//	å„ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã®åŸºåº•ã‚¯ãƒ©ã‚¹
 //========================================================
 
 class Entity {
@@ -19,9 +19,8 @@ public:
 	Entity();
 	~Entity();
 
-	virtual void Draw();
-	virtual void Normalize();
-	float Length(IntVector2 pos2);
+	virtual void Draw() = 0;
+	virtual void Normalize() = 0;
 
 	virtual bool GetIsAlive() { return isAlive_; }
 };
