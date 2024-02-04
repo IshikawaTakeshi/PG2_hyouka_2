@@ -115,7 +115,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\TextureManager.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
-    <ClCompile Include="Collision_Circle.cpp" />
+    <ClCompile Include="collision\Collision_Circle.cpp" />
     <ClCompile Include="Entity\Bullet.cpp" />
     <ClCompile Include="Entity\Enemy.cpp" />
     <ClCompile Include="Entity\EnemySpawner.cpp" />

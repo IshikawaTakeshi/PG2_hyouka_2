@@ -77,7 +77,7 @@
     <ClCompile Include="Entity\Entity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
-    <ClCompile Include="Collision_Circle.cpp">
+    <ClCompile Include="collision\Collision_Circle.cpp">
       <Filter>Collision</Filter>
     </ClCompile>
   </ItemGroup>
