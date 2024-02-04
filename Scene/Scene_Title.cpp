@@ -1,7 +1,7 @@
 ﻿#include "Scene/Scene_Title.h"
-#include "Novice.h"
 #include "Scene/SceneManager.h"
 #include "Scene/Scene_Select.h"
+#include "Novice.h"
 
 //コンストラクタ
 Title_Scene::Title_Scene() {

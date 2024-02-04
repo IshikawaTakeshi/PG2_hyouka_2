@@ -1,8 +1,6 @@
 ﻿#include "Entity/Player.h"
 #include "Novice.h"
 
-
-
 Player::Player() {
 	Init({ 640.0f,360.0f }, { 32.0f,32.0f }, 10.0f);
 }
